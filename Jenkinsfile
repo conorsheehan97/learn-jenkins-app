@@ -21,5 +21,18 @@ pipeline {
             }
         
         }
+        stage('Test')
+        {
+                  docker {
+                    image 'node:18-alpine'
+                    reuseNode true
+                }
+                steps{
+                    sh'''
+                    echo "build stage"
+                    '''
+                }
+
+        }
     }
 }
