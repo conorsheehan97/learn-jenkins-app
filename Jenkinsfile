@@ -32,6 +32,7 @@ else
 fi
 
                     '''
+                    sh 'npm test'
                 }
 
         }
