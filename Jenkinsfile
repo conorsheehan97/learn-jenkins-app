@@ -9,8 +9,8 @@ pipeline {
                     reuseNode true
                 }
             }
-            steps {
-                '''
+            steps{
+                sh '''
                 ls -la
                 node --version
                 npm --version
