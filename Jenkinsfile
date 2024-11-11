@@ -23,15 +23,10 @@ pipeline {
         }
         stage('Test')
         {
-            agent {
-                  docker {
-                    image 'node:18-alpine'
-                    reuseNode true
-                }
             }
                 steps{
                     sh'''
-                    if [ -f /build/index.html ]; then
+                    if [ -f build/index.html ]; then
     echo "File exists and is a regular file."
 else
     echo "File does not exist or is not a regular file."
