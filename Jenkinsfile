@@ -22,6 +22,7 @@ pipeline {
         
         }
         stage('Test')
+        {
                 steps{
                     sh'''
                     if [ -f build/index.html ]; then
@@ -35,3 +36,4 @@ fi
 
         }
     }
+}
