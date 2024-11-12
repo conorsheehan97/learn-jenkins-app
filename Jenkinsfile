@@ -52,7 +52,7 @@ pipeline {
             }
         
         }
-        stage('Test'){
+        stage('Test E2E'){
             agent {
                 docker {
                     image 'node:18-alpine'
